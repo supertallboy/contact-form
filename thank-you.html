@@ -1,20 +1,52 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="5; url=https://supertallboy.github.io/">
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="5; url=https://supertallboy.github.io/contact-form/">
     <title>Thank You</title>
     <style>
       body {
+        margin: 0;
         font-family: 'Helvetica Neue', sans-serif;
-        background: #fff;
-        text-align: center;
-        padding: 50px;
+        background-color: #ffffff;
         color: #111;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .message-wrapper {
+        max-width: 600px;
+      }
+
+      h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .subtle {
+        font-size: 14px;
+        margin-top: 40px;
+        color: #777;
       }
     </style>
   </head>
   <body>
-    <h1>Thanks for reaching out! ✨</h1>
-    <p>We’ll get back to you soon. You’ll be redirected to the homepage in a few seconds.</p>
+    <div class="message-wrapper">
+      <h1>Thanks for reaching out!</h1>
+      <p>Your message was sent successfully. I’ll get back to you as soon as possible.</p>
+      <p class="subtle">Redirecting you back to the homepage...</p>
+    </div>
   </body>
 </html>
