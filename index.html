@@ -12,8 +12,16 @@
       .form-wrapper {
         max-width: 600px;
         margin: 0 auto;
-        padding: 40px 20px;
+        padding: 10px 20px 40px; /* Reduced top padding from 40px to 10px */
         box-sizing: border-box;
+      }
+
+      .form-title {
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 1px;
+        margin-bottom: 32px;
+        color: #111;
       }
 
       .form-group {
@@ -75,34 +83,36 @@
         align-items: center;
         cursor: pointer;
         transition: all 0.3s ease;
+        padding: 0;
+        gap: 12px;
+        transform: translateX(0);
       }
 
       button:hover {
         color: #000;
+        transform: translateX(4px);
       }
 
       .helmet-icon {
-        width: 20px;
-        height: 20px;
-        margin-right: 12px;
+        width: 40px;
+        height: 40px;
         transition: transform 0.3s ease;
-      }
-
-      button:hover .helmet-icon {
-        transform: translateX(4px);
       }
 
       svg {
         fill: #000;
+        width: 100%;
+        height: 100%;
       }
     </style>
   </head>
   <body>
     <div class="form-wrapper">
+      <p class="form-title">Contact Form</p>
+
       <form action="https://formsubmit.co/adrianmarica@protonmail.com" method="POST">
-        <!-- Redirect to custom thank-you page -->
         <input type="hidden" name="_next" value="https://supertallboy.github.io/contact-form/thank-you.html">
-        
+
         <div class="form-group">
           <input type="text" name="name" id="name" placeholder=" " required>
           <label for="name">Name</label>
@@ -130,7 +140,6 @@
 
         <button type="submit">
           <span class="helmet-icon">
-            <!-- Hermes Helmet SVG Icon -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
               <path d="M622.3 186.9c-4.6-14.2-18.2-23.6-33.2-22.3-23.7 2.1-44.4 11.1-63.7 20.5-5.2-35.6-19.2-72.3-49.6-106.5C452.3 43.8 407.6 18.3 366.8 6.5c-18.8-5.4-37.5 8.3-38.2 27.9-.6 16.4 11.7 30.4 27.9 32.2 36.3 4.1 70.6 25.1 93.5 51.5 26.4 30.4 37.2 64.3 39.4 95.6-28.7 13.3-56.3 27.6-81.9 43.7-9.6 6-19.1 12.1-28.5 18.3-7.3 4.8-16.3 7-25.2 6.7-37.4-1.2-67.4-32.3-67.4-69.6v-13.6c0-18.4-15-33.4-33.4-33.4H182c-27.4 0-50 22.6-50 50v12c0 13.5 2.7 26.5 7.6 38.2-40.7 23.7-85.3 55.2-119.8 97.3-11.2 13.7-8.7 34 5.5 44.9 11.6 9.1 27.7 9.7 39.9 1.6 48.4-32.4 96.5-60.2 148.1-84.2 15.1 38.3 52.3 65.2 96.2 65.2h2.5c29.2 0 57.8-8.3 83.2-24.1 10.5-6.5 21.1-13 31.9-19.4 43.4-25.7 87.9-46.5 131.8-62.4 17.2-6.2 26.7-24.8 21.7-42.1z"/>
             </svg>
