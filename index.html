@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Form</title>
   <style>
     html, body {
@@ -19,6 +19,7 @@
       width: 100%;
       padding: 20px 20px 0;
       box-sizing: border-box;
+      margin-top: -1px;
     }
 
     .form-group {
@@ -201,24 +202,11 @@
     </form>
   </div>
 
-  <!-- Dark mode switch via URL -->
   <script>
     const params = new URLSearchParams(window.location.search);
     if (params.get('theme') === 'dark') {
       document.body.classList.add('dark-mode');
     }
-  </script>
-
-  <!-- Auto-resize the iframe on parent page -->
-  <script>
-    function sendHeightToParent() {
-      const height = document.body.scrollHeight;
-      window.parent.postMessage({ formHeight: height }, '*');
-    }
-
-    window.addEventListener('load', sendHeightToParent);
-    window.addEventListener('resize', sendHeightToParent);
-    setTimeout(sendHeightToParent, 500);
   </script>
 </body>
 </html>
