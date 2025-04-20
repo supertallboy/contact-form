@@ -129,7 +129,6 @@
       height: 100%;
     }
 
-    /* 🌙 Dark mode styles triggered by JS */
     body.dark-mode {
       background-color: #1a1918;
       color: #fff;
@@ -202,12 +201,24 @@
     </form>
   </div>
 
-  <!-- JS to enable dark mode if ?theme=dark is in the URL -->
+  <!-- Dark mode switch via URL -->
   <script>
     const params = new URLSearchParams(window.location.search);
     if (params.get('theme') === 'dark') {
       document.body.classList.add('dark-mode');
     }
+  </script>
+
+  <!-- Auto-resize the iframe on parent page -->
+  <script>
+    function sendHeightToParent() {
+      const height = document.body.scrollHeight;
+      window.parent.postMessage({ formHeight: height }, '*');
+    }
+
+    window.addEventListener('load', sendHeightToParent);
+    window.addEventListener('resize', sendHeightToParent);
+    setTimeout(sendHeightToParent, 500);
   </script>
 </body>
 </html>
