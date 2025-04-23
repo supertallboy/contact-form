@@ -20,7 +20,7 @@
       width: 100%;
       padding: 20px 20px 0;
       box-sizing: border-box;
-      margin-top: -1px;
+      margin-top: -8px;
     }
 
     .form-group {
@@ -33,17 +33,9 @@
       position: absolute;
       left: 0;
       bottom: 0;
-      height: 4px;
+      height: 1px;
       width: 100%;
-      background-color: #000;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.4s ease;
-    }
-
-    .form-group:hover::after,
-    .form-group:focus-within::after {
-      transform: scaleX(1);
+      background-color: #ccc;
     }
 
     .form-group input,
@@ -58,7 +50,6 @@
       box-sizing: border-box;
       position: relative;
       z-index: 1;
-      text-transform: none;
       font-family: inherit;
       font-weight: 300;
     }
@@ -84,7 +75,6 @@
       letter-spacing: 0.5px;
       pointer-events: none;
       transition: opacity 0.2s ease;
-      text-transform: none;
       font-family: inherit;
       font-weight: 300;
     }
@@ -108,7 +98,6 @@
       transition: all 0.3s ease;
       padding: 12px 0;
       gap: 12px;
-      transform: translateX(0);
       margin-top: 16px;
       font-family: inherit;
       font-weight: 300;
@@ -137,7 +126,7 @@
     }
 
     body.dark-mode .form-group::after {
-      background-color: #fff;
+      background-color: #666;
     }
 
     body.dark-mode .form-group input,
